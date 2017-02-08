@@ -99,19 +99,26 @@ The same as above applies, you will just have to add static to the CONFIG:
     qmake CONFIG+=static
 
 Documentation
+文档
 =============
 
 The documentation can be generated with:
     make docs
+该文档可以由以下命令生成：
+	make docs
 
 The documentation is generated into the doc folder under the build folder.
 Both Qt Assistant (qtcharts.qch) and in HTML format (qtcharts subfolder)
 documentation is generated.
+该文档生成到build/doc目录下，生成了两种格式：Qt帮助助手(qtcharts.qch)和HTML(qtchars子目录)。
 
 Please refer to the generated documentation for more information:
     doc/qtcharts/qtcharts-index.html
+获取更多图表信息，请链接进入生成好的文档：doc/qtcharts/qtcharts-index.html	
 
 Known issues
+友情提示
 ============
 
 - Zooming too far or too close may eventually freeze the zooming and scrolling.
+- 放大缩小可能冻结缩放和滚动功能。
