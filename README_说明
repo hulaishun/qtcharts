@@ -1,0 +1,117 @@
+---------------
+Qt Charts
+Qt 图表
+---------------
+
+Qt Charts module provides a set of easy to use chart components. It uses
+the Qt Graphics View Framework, therefore charts can be easily integrated
+to modern user interfaces.
+Qt图表模块提供一系列的易用图表组件集合。其使用Qt图形视图框架，因此图表很容易
+集成过度到流行用户接口中。
+
+
+System Requirements
+系统要求
+===================
+- Qt 5.4 or newer
+- Qt5.4版本及以后版本
+- For QML applications QtQuick 2 is required
+- 对应QML程序必须包含QtQuick2模块
+- Manipulating Qt Charts graphs with QML Designer requires Qt Creator 3.3 or newer
+- 使用QML设计器操作Qt图表，必须要Qt Creator 3.3版本及以后版本
+
+Building
+编译
+========
+
+Configure the project with qmake:
+    qmake
+使用qmake命令配置该工程
+
+After running qmake, build the project with make:
+    (Linux) make
+    (Windows with MinGw) mingw32-make
+    (Windows with Visual Studio) nmake
+    (OS X) make
+	
+运行qmake命令后，需要使用make命令继续编译该工程
+	(Linux) make
+    (Windows with MinGw) mingw32-make
+    (Windows with Visual Studio) nmake
+    (OS X) make	
+
+The above generates the default makefiles for your configuration, which is typically
+the release build if you are using precompiled binary Qt distribution. To build both
+debug and release, or one specifically, use one of the following qmake lines instead.
+以上配置生成的是默认makefiles文件，使用了预编译二进制qt分发，它将生成典型的发行编译。
+若想分别生成调试版和发行版或者指定一个，请使用如下的qmake行命令代替。
+
+For debug builds:
+    qmake CONFIG+=debug
+    make
+  or
+    qmake CONFIG+=debug_and_release
+    make debug
+生成调试版：
+	qmake CONFIG+=debug
+	make
+	或者
+	qmake CONFIG+=debug_and_release
+	make debug
+
+For release builds:
+    qmake CONFIG+=release
+    make
+  or
+    qmake CONFIG+=debug_and_release
+    make release
+生成发行版：
+	qmake CONFIG+=release
+	make
+	或者
+	qmake CONFIG+=debug_and_release
+	make release
+
+For both builds (Windows/OS X only):
+    qmake CONFIG+="debug_and_release build_all"
+    make
+在windows或OS X下，可以同时生成调试版和发行版：
+	qmake CONFIG+="debug_and_release build_all"
+	make
+
+After building, install the module to your Qt directory:
+    make install
+生成之后，安装该模块到你的Qt安装目录：
+	make install
+
+If you want to uninstall the module:
+    make uninstall
+如果你想卸载该模块：
+	make uninstall
+
+Building as a statically linked library
+生成静态链接库
+=======================================
+
+The same as above applies, you will just have to add static to the CONFIG:
+    qmake CONFIG+=static
+基本步骤同上，你只需要增加static到CONFIG中
+    qmake CONFIG+=static
+
+Documentation
+=============
+
+The documentation can be generated with:
+    make docs
+
+The documentation is generated into the doc folder under the build folder.
+Both Qt Assistant (qtcharts.qch) and in HTML format (qtcharts subfolder)
+documentation is generated.
+
+Please refer to the generated documentation for more information:
+    doc/qtcharts/qtcharts-index.html
+
+Known issues
+============
+
+- Zooming too far or too close may eventually freeze the zooming and scrolling.
